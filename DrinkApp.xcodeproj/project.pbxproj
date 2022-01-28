@@ -13,6 +13,7 @@
 		AC5B5A3527A39E75003C6A27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5B5A3327A39E75003C6A27 /* Main.storyboard */; };
 		AC5B5A3727A39E77003C6A27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5B5A3627A39E77003C6A27 /* Assets.xcassets */; };
 		AC5B5A3A27A39E77003C6A27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5B5A3827A39E77003C6A27 /* LaunchScreen.storyboard */; };
+		AC5B5A4227A39ECC003C6A27 /* DrinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B5A4127A39ECC003C6A27 /* DrinksModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AC5B5A3627A39E77003C6A27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC5B5A3927A39E77003C6A27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC5B5A3B27A39E77003C6A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5B5A4127A39ECC003C6A27 /* DrinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		AC5B5A2C27A39E75003C6A27 /* DrinkApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC5B5A4127A39ECC003C6A27 /* DrinksModel.swift */,
 				AC5B5A2D27A39E75003C6A27 /* AppDelegate.swift */,
 				AC5B5A2F27A39E75003C6A27 /* SceneDelegate.swift */,
 				AC5B5A3127A39E75003C6A27 /* ViewController.swift */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5B5A4227A39ECC003C6A27 /* DrinksModel.swift in Sources */,
 				AC5B5A3227A39E75003C6A27 /* ViewController.swift in Sources */,
 				AC5B5A2E27A39E75003C6A27 /* AppDelegate.swift in Sources */,
 				AC5B5A3027A39E75003C6A27 /* SceneDelegate.swift in Sources */,
