@@ -1,6 +1,6 @@
 import Foundation
 
-struct drinks{
+struct Drinks: Decodable{
     
     let idDrink: String
     let name: String
