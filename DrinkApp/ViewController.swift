@@ -9,15 +9,16 @@ import UIKit
 
 
 class ViewController: UIViewController, DrinkManagerDelegate {
-    var searchDrink : UITextField?
-    var foundDrink : UILabel?
-    var searchButton : UIButton?
-    var drinkManagerr = DrinkManager()
-   // var newSearchButton = Drink()
+    var searchDrink: UITextField?
+    var foundDrink: UILabel?
+    var searchButton: UIButton?
+    var drinkManager = DrinkManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        drinkManager.delegate = self
         
         initUI()
     }
@@ -53,12 +54,13 @@ class ViewController: UIViewController, DrinkManagerDelegate {
     }
     
     @objc func newSearchButton() {
-        drinkManagerr.getDrink(drinkName: searchDrink?.text ?? "")
+        drinkManager.getDrink(drinkName: searchDrink?.text ?? "")
     }
 
     func didUpdateDrink(_ drinkManager: DrinkManager, drink: DrinkModel) {
         DispatchQueue.main.async {
-            self.foundDrink?.text = drink.id}
+            self.foundDrink?.text = drink.id
+            
         }
     }
 }
