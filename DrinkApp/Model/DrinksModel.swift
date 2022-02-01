@@ -1,8 +1,8 @@
 import Foundation
 
-struct Drinks: Decodable{
-    
-    let idDrink: String
+
+struct DrinkModel {
+    let id: String
     let name: String
     let type: String
     let glassType: String
@@ -10,5 +10,4 @@ struct Drinks: Decodable{
     let image: URL
     let ingredients: String
     let measure: String
-    
 }
