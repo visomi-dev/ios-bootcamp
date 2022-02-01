@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, DrinkManagerDelegate {
     var searchDrink: UITextField?
-    var foundDrink: UILabel?
+    var foundDrinkTitle: UILabel?
+    var foundDrinkType: UILabel?
     var searchButton: UIButton?
     var drinkManager = DrinkManager()
 
@@ -41,12 +42,18 @@ class ViewController: UIViewController, DrinkManagerDelegate {
         
         view.addSubview(searchButton!)
 
-        foundDrink = UILabel(frame: CGRect(x: 0, y: 200, width: 100, height: 40))
-        foundDrink?.backgroundColor = .green
-        foundDrink?.center.x = self.view.center.x
+        foundDrinkTitle = UILabel(frame: CGRect(x: 0, y: 200, width: 300, height: 40))
+        foundDrinkTitle?.backgroundColor = .green
+        foundDrinkTitle?.center.x = self.view.center.x
 
-        view.addSubview(foundDrink!)
-        
+        view.addSubview(foundDrinkTitle!)
+
+        foundDrinkType = UILabel(frame: CGRect(x: 0, y: 250, width: 300, height: 40))
+        foundDrinkType?.backgroundColor = .gray
+        foundDrinkType?.center.x = self.view.center.x
+
+        view.addSubview(foundDrinkType!)
+
         let tapRegisterButton = UITapGestureRecognizer(target: self, action: #selector(newSearchButton))
         
         searchButton?.addGestureRecognizer(tapRegisterButton)
@@ -59,8 +66,8 @@ class ViewController: UIViewController, DrinkManagerDelegate {
 
     func didUpdateDrink(_ drinkManager: DrinkManager, drink: DrinkModel) {
         DispatchQueue.main.async {
-            self.foundDrink?.text = drink.id
-            
+            self.foundDrinkTitle?.text = "Title: \(drink.name)"
+            self.foundDrinkType?.text = "Type: \(drink.type!)"
         }
     }
 }
