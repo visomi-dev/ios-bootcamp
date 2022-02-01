@@ -9,16 +9,16 @@ import Foundation
 
 struct DrinkDataModel: Decodable {
     let idDrink: String
-    let name: String
-    let type: String
-    let glassType: String
-    let instructions: String
-    let image: URL
-    let ingredients: String
-    let measure: String
+    let strDrink: String
+    let strCategory: String?
+    let strGlass: String?
+    let strInstructions: String?
+    let strImageSource: String?
+    let strIngredient1: String?
+    let strMeasure1: String?
 }
 
 
 struct DrinksDataModel: Decodable {
-    let drinks: [DrinksDataModel]
+    let drinks: [DrinkDataModel]
 }

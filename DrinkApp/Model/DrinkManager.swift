@@ -54,7 +54,7 @@ struct DrinkManager {
             
             let drinkData = decodedData.drinks[0]
             
-            let drink = DrinkModel(id: drinkData.idDrink, name: drinkData.name, type: drinkData.type, glassType: drinkData.glassType, instructions: drinkData.instructions, image: drinkData.image, ingredients: drinkData.ingredients, measure: drinkData.measure)
+            let drink = DrinkModel(id: drinkData.idDrink, name: drinkData.strDrink, type: drinkData.strCategory, glassType: drinkData.strGlass, instructions: drinkData.strInstructions, image: drinkData.strImageSource, ingredients: drinkData.strIngredient1, measure: drinkData.strMeasure1)
             
             return drink
         } catch {

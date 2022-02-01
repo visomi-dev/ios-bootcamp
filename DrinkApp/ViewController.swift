@@ -58,7 +58,7 @@ class ViewController: UIViewController, DrinkManagerDelegate {
 
     func didUpdateDrink(_ drinkManager: DrinkManager, drink: DrinkModel) {
         DispatchQueue.main.async {
-            self.foundDrink?.text = drink.id
+            self.foundDrink?.text = drink.id}
         }
     }
 }
